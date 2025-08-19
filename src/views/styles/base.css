@@ -1,0 +1,45 @@
+/* ============================= */
+/* Reset e variáveis de tema    */
+/* ============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --bg-page: #f2f2f2;
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+  --text-light: #555555;
+  --border-radius: 12px;
+  --transition-fast: 0.2s;
+}
+
+/* ============================= */
+/* Estilo base da página        */
+/* ============================= */
+body {
+  background-color: var(--bg-page);
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ============================= */
+/* Utilitários                  */
+/* ============================= */
+.hidden { display: none !important; }
+
+@media (max-width: 768px) {
+  .camera-container {
+    width: 95vw;
+    height: calc(95vw * var(--camera-aspect-ratio));
+  }
+}

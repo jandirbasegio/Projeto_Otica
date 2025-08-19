@@ -1,0 +1,41 @@
+@import url('./base.css');
+
+/* ============================= */
+/* Página inicial (cards)       */
+/* ============================= */
+.card-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 584px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  width: 280px;
+  padding: 24px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  color: var(--text-dark);
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-light);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}

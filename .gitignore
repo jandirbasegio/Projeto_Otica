@@ -1,0 +1,80 @@
+# === Dependencias ===
+node_modules/
+jspm_packages/
+bower_components/
+.pnp.*
+.pnpm-debug.log*
+
+# === Ambiente ===
+.env*
+!.env.example
+.env.local
+.env.*.local
+
+# === Logs ===
+*.log*
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# === Build/Compilacao ===
+dist/
+out/
+build/
+.next/
+.nuxt/
+.vuepress/dist
+.docusaurus/
+.serverless/
+.rpt2_cache/
+.rts2_cache*
+
+# === Testes ===
+coverage/
+.nyc_output
+*.lcov
+
+# === IDEs ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# === Sistemas Operacionais ===
+.DS_Store
+Thumbs.db
+
+# === Cache ===
+.cache/
+.parcel-cache
+.fusebox/
+.eslintcache
+.stylelintcache
+.parcel-cache
+.grunt
+.temp/
+
+# === Pacotes/Certificados ===
+*.tgz
+*.pem
+*.pid
+*.seed
+*.pid.lock
+*.key
+
+# === TypeScript ===
+*.tsbuildinfo
+
+# === Outros ===
+connect.lock
+dynamodb_local/
+config.json
+credentials/
+.sass-cache/

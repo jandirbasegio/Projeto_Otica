@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' blob: https://cf-st.sc-cdn.net;
+    connect-src 'self' https://camera-kit-api.snapar.com https://cf-st.sc-cdn.net https://*.snapchat.com https://bolt-gcdn.sc-cdn.net;
+    img-src 'self' data: blob: https://*.sc-cdn.net;
+    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://bolt-gcdn.sc-cdn.net;
+  "/>
+  <title>Optical Project</title>
+
+  <!-- CSS estático da home (não há entry TS aqui) -->
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+<body>
+  <main class="card-container">
+    <a href="./snap-lens.html" class="card">
+      <h2>Snap Lens</h2>
+      <p>Use your snap lens in real time</p>
+    </a>
+    <a href="/views/index.html" class="card">
+      <h2>Next Page</h2>
+      <p>Coming soon!</p>
+    </a>
+  </main>
+</body>
+</html>

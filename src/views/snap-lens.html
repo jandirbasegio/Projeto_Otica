@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Assim somente em dev-->
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-eval' blob: https://cf-st.sc-cdn.net;
+  connect-src 'self' http://localhost:8080 https://camera-kit-api.snapar.com https://cf-st.sc-cdn.net https://*.snapchat.com https://bolt-gcdn.sc-cdn.net;
+  img-src 'self' data: blob: https://*.sc-cdn.net;
+  style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+  style-src-elem 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+  font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://bolt-gcdn.sc-cdn.net;
+  upgrade-insecure-requests;
+"/>
+
+
+  <title>Snap Lens – Optical Project</title>
+  <link rel="stylesheet" href="./styles/snap-lens.css" />
+   
+  <!-- Font Awesome continua via CDN -->
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <main>
+    <h1>Snap Lens</h1>
+
+    <!-- Controles externos -->
+    <div class="controls">
+      <button id="control-back" class="lens-btn" onclick="history.back()" aria-label="Voltar Página">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button id="control-start" class="lens-btn" aria-label="Iniciar Câmera">
+        <i class="fa-solid fa-video"></i> Start Camera
+      </button>
+    </div>
+
+    <!-- Container da câmera -->
+    <div id="camera-container" class="camera-container hidden">
+      <canvas id="camera-canvas" class="hidden"></canvas>
+
+      <button id="control-close" class="control-btn hidden" aria-label="Fechar Câmera">
+        <i class="fa-solid fa-times"></i>
+      </button>
+      <button id="control-mirror" class="control-btn hidden" aria-label="Espelhar">
+        <i class="fa-solid fa-arrows-spin"></i>
+      </button>
+      <button id="control-fps" class="control-btn hidden" aria-label="FPS">
+        <i class="fa-solid fa-tachometer-alt"></i>
+      </button>
+
+      <div id="lens-thumbnails" class="lens-carousel hidden"></div>
+
+      <div class="lens-controls hidden">
+        <button id="control-lens-prev" class="control-btn" aria-label="Lente anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="current-filter">
+          <img id="lens-current" src="" alt="Filtro ativo" />
+        </div>
+        <button id="control-lens-next" class="control-btn" aria-label="Próxima lente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- O Vite processa este entry TS e injeta o CSS via import -->
+  <script type="module" src="/entries/SnapLensEntry.ts"></script>
+</body>
+</html>
